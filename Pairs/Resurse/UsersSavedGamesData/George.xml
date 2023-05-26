@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XmlData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <level>2</level>
+  <cards>
+    <CardData>
+      <buttonIsVisible>false</buttonIsVisible>
+      <indexOfPhoto>0</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>4</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>2</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>3</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>2</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>false</buttonIsVisible>
+      <indexOfPhoto>0</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>4</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>1</indexOfPhoto>
+    </CardData>
+    <CardData>
+      <buttonIsVisible>true</buttonIsVisible>
+      <indexOfPhoto>3</indexOfPhoto>
+    </CardData>
+  </cards>
+  <cardsMached>2</cardsMached>
+  <width>3</width>
+  <height>3</height>
+  <singlePhotoIndex>1</singlePhotoIndex>
+</XmlData>

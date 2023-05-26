@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4FD5E052-80FC-4FF7-B890-B36E13DE5A10}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Pairs</RootNamespace>
+    <AssemblyName>Pairs</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Card.cs" />
+    <Compile Include="GameType.xaml.cs">
+      <DependentUpon>GameType.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PlayScreen.xaml.cs">
+      <DependentUpon>PlayScreen.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SignInPage.xaml.cs">
+      <DependentUpon>SignInPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="User.cs" />
+    <Compile Include="XmlData.cs" />
+    <Page Include="GameType.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="PlayScreen.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SignInPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <ItemGroup>
+    <Resource Include="Resurse\Images\basicImg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurse\Avatars\deer.png" />
+    <Resource Include="Resurse\Avatars\koala.png" />
+    <Resource Include="Resurse\Avatars\panda.png" />
+    <Resource Include="Resurse\Avatars\snake.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurse\Users.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurse\Images\14-cheetah-gallery-11150555_uploadsmember1615427yourshot-1615427-11150555jpg_czrgo44n7myunageixwotwjyktp3eflutfvvbpyjwjhzlmh4iziq_4690x3127.jpg" />
+    <Resource Include="Resurse\Images\16_Adorable-Puppy-Pictures-that-Will-Make-You-Melt_507959740_Utekhina-Anna.jpg" />
+    <Resource Include="Resurse\Images\41586_2016_Article_BF540500a_Figi_HTML.jpg" />
+    <Resource Include="Resurse\Images\4623451.jpg" />
+    <Resource Include="Resurse\Images\best-fall-pictures-1657042206.jpg" />
+    <Resource Include="Resurse\Images\border_collie_dog_pictures_.jpg" />
+    <Resource Include="Resurse\Images\environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" />
+    <Resource Include="Resurse\Images\f42d0b79bcf38d5bc77d939cb61037dd--google-gravity-magical-photography.jpg" />
+    <Resource Include="Resurse\Images\france-in-pictures-beautiful-places-to-photograph-eiffel-tower.jpg" />
+    <Resource Include="Resurse\Images\funny-pictures.jpg" />
+    <Resource Include="Resurse\Images\GettyImages-1133605325-scaled-e1617227898456.jpg" />
+    <Resource Include="Resurse\Images\gettyimages-180699358-612x612.jpg" />
+    <Resource Include="Resurse\Images\istockphoto-1145618475-612x612.jpg" />
+    <Resource Include="Resurse\Images\istockphoto-517188688-612x612.jpg" />
+    <Resource Include="Resurse\Images\istockphoto-675172642-612x612.jpg" />
+    <Resource Include="Resurse\Images\moon-light-shine-through-window-into-islamic-mosque-interior.jpg" />
+    <Resource Include="Resurse\Images\nature-3082832__480.jpg" />
+    <Resource Include="Resurse\Images\pexels-chevanon-photography-1108099.jpg" />
+    <Resource Include="Resurse\Images\picture-citing-lion-noble.jpg" />
+    <Resource Include="Resurse\Images\PictureThis_Festival_sml.jpg" />
+    <Resource Include="Resurse\Images\portugal-in-pictures-beautiful-places-to-photograph-palacio-nacional-pena-sintra.jpg" />
+    <Resource Include="Resurse\Images\river-surrounded-by-forests-cloudy-sky-thuringia-germany.jpg" />
+    <Resource Include="Resurse\Images\rottweiler_dog_pictures.jpg" />
+    <Resource Include="Resurse\Images\Sandals-White-House-Jamaica-Sunrise-Main-Pool.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resurse\UsersSavedGamesData\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resurse\Images\amy-shamblen-euqiHwS38Rw-unsplash.jpg" />
+    <Resource Include="Resurse\Images\animesh-bhargava-dxZMLX7qRGE-unsplash.jpg" />
+    <Resource Include="Resurse\Images\charlesdeluvio-0v_1TPz1uXw-unsplash.jpg" />
+    <Resource Include="Resurse\Images\chris-dez-t2ZIt-WNXrk-unsplash.jpg" />
+    <Resource Include="Resurse\Images\fahd-khan-mrFdBdTlElk-unsplash.jpg" />
+    <Resource Include="Resurse\Images\fernando-andrade-nAOZCYcLND8-unsplash.jpg" />
+    <Resource Include="Resurse\Images\mae-mu-vbAEHCrvXZ0-unsplash.jpg" />
+    <Resource Include="Resurse\Images\pexels-bogdan-glisik-1405355.jpg" />
+    <Resource Include="Resurse\Images\pexels-element-digital-775032.jpg" />
+    <Resource Include="Resurse\Images\pexels-guduru-ajay-bhargav-863988.jpg" />
+    <Resource Include="Resurse\Images\pexels-jane-doan-1132047.jpg" />
+    <Resource Include="Resurse\Images\pexels-kaichieh-chan-708777.jpg" />
+    <Resource Include="Resurse\Images\pexels-lisa-fotios-1161547.jpg" />
+    <Resource Include="Resurse\Images\pexels-lisa-fotios-1395958.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-163407.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-207085.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-209977.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-390051.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-461415.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-47730.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-51312.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-65256.jpg" />
+    <Resource Include="Resurse\Images\pexels-pixabay-71104.jpg" />
+    <Resource Include="Resurse\Images\sam-moghadam-khamseh-cU5TUyEaZXQ-unsplash.jpg" />
+    <Resource Include="Resurse\Images\sherry-christian-8Myh76_3M2U-unsplash.jpg" />
+    <Resource Include="Resurse\Images\them-snapshots-40U4YEffPgE-unsplash.jpg" />
+    <Resource Include="Resurse\Images\vino-li-pCjw_ygKCv0-unsplash.jpg" />
+  </ItemGroup>
+</Project>
